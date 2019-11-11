@@ -11,39 +11,39 @@ public class CalcularImc {
 
 		imc = peso / (altura * altura);
 		
-		double formantandoVigula = Double.valueOf(formato.format(imc).replace(".", ",").replace(",", "."));
+		double imc = 0;
 	
 		if (imc < 16.00) {
-			System.out.println("Baixo do peso grau III " + formantandoVigula);
+			System.out.println("Baixo do peso grau III " + imc);
 		} else if (imc >= 16.00 && imc <= 16.99) {
 
 			System.out.println(
-					"Baixo do peso grau II " + formantandoVigula);
+					"Baixo do peso grau II " + imc);
 		} else if (imc >= 17.00 && imc <= 18.49) {
 			System.out.println(
-					"Baixo do peso grau I " + formantandoVigula);
+					"Baixo do peso grau I " + imc);
 
 		} else if (imc >= 18.50 && imc <= 24.99) {
-			System.out.println("Peso ideal " + formantandoVigula);
+			System.out.println("Peso ideal " + imc);
 
 		} else if (imc >= 25.00 && imc <= 29.99) {
 			System.out
-					.println("Sobre o peso " + formantandoVigula);
+					.println("Sobre o peso " + imc);
 
 		} else if (imc >= 30.00 && imc <= 34.99) {
 			System.out.println(
-					"Obesidade grau I " + formantandoVigula);
+					"Obesidade grau I " + imc);
 
 		} else if (imc >= 35.00 && imc <= 39.99) {
 			System.out.println(
-					"Obesidade grau II " + formantandoVigula);
+					"Obesidade grau II " + imc);
 
 		} else if (imc >= 40.00) {
 			System.out.println(
-					"Obesidade grau III" + formantandoVigula);
+					"Obesidade grau III" + imc);
 
 		}
 
-		return formantandoVigula;
+		return imc;
 	}
 }
