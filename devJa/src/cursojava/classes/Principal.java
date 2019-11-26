@@ -11,7 +11,7 @@ public class Principal {
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
 		for (int qtd = 1; qtd <= 2; qtd++) {
-			String nome = JOptionPane.showInputDialog("Qual é o nome do aluno" + qtd+ " ?");
+			String nome = JOptionPane.showInputDialog("Qual é o nome do aluno" + qtd + " ?");
 			/*
 			 * String idade = JOptionPane.showInputDialog("Qual a Idade?"); String
 			 * dataNascimento = JOptionPane.showInputDialog("Data de nascimento?"); String
@@ -25,8 +25,10 @@ public class Principal {
 			 */
 
 			Aluno aluno1 = new Aluno();
+
+			aluno1.setNome(nome);
 			/*
-			 * aluno1.setNome(nome); aluno1.setIdade(Integer.valueOf(idade));S
+			 * aluno1.setIdade(Integer.valueOf(idade)); /*
 			 * aluno1.setDataNascimento(dataNascimento); aluno1.setRegistroGeral(rg);
 			 * aluno1.setNumeroCpf(cpf); aluno1.setNomeMae(mae); aluno1.setNomePai(pai);
 			 * aluno1.setDateMatricula(matricula); aluno1.setSerieMatricula(serie);
@@ -79,10 +81,11 @@ public class Principal {
 
 		}
 		for (Aluno aluno : alunos) {
-
-			System.out.println(aluno);
-			System.out.println("Media do aluno " + aluno.getMediaNota());
-			System.out.println("Resultado " + aluno.getAlunoAprovado());
+			if (aluno.getNome().equalsIgnoreCase("Jonson")) {
+				System.out.println(aluno);
+				System.out.println("Media do aluno " + aluno.getMediaNota());
+				System.out.println("Resultado " + aluno.getAlunoAprovado());
+			}
 
 			System.out.println("_____________________________________");
 		}
