@@ -3,14 +3,8 @@ package cursojava.classes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno {
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+public class Aluno extends Pessoa{
+	
 	private String dateMatricula;
 	private String nomeEscola;
 	private String serieMatricula;
@@ -100,6 +94,14 @@ public class Aluno {
 	public List<Disciplina> getDiciplinas() {
 		return disciplinas;
 	}
+	/*public Aluno (String nomePadrao) {/*Cria os dados na memoria - Sendo padrao do java 
+		nome = nomePadrao;
+	}
+	
+	public Aluno (String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;
+	}*/
 
 	public void setDiciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
@@ -146,6 +148,7 @@ public class Aluno {
 		result = prime * result + ((serieMatricula == null) ? 0 : serieMatricula.hashCode());
 		return result;
 	}
+	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -219,4 +222,19 @@ public class Aluno {
 				+ serieMatricula + ", diciplinas=" + disciplinas + "]";
 	}
 
+		@Override
+		public boolean pessoaMaiorIdade() {
+			
+			return idade >= 21;
+		}
+		
+		public String msgMaiorIdade() {
+			return this.pessoaMaiorIdade()?"maior de idade " : "Ixii menor de idade";
+		}
+
+		@Override
+		public double salario() {
+			// TODO Auto-generated method stub
+			return 1500.90;
+		}
 }
